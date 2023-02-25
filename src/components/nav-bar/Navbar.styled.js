@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const Headerstyle = styled.header`
 padding: 25px;
 padding-right: 0;
@@ -29,6 +30,7 @@ padding-right: 0;
       // margin-right: 100px;
       padding-top: 1.5rem;
       width: 51rem;
+       }
     ul {
       display: flex;
       justify-content: center;
@@ -51,8 +53,19 @@ padding-right: 0;
     }
     a:hover{
       border-bottom:  solid 3px rgba(255, 255, 255, 0.5);
-      
     }
-   
+ 
+
+
+
+  @media ( max-width: 768px ) {
+    // position: absolute;
+    // top: 5%;
+      .hr {
+        display: none;
+      }
+    .nav{
+      display: none;
+    }
   }
 `;
