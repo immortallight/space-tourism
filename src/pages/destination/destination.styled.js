@@ -26,14 +26,14 @@ export const Destinationstyle = styled.div`
     border-bottom: solid 3px rgba(255, 255, 255, 0.5);
   }
 
-  @keyframes butmove {
-    from {
-      margin-right: 20px;
-    }
-    to {
-      margin-right: 50px;
-    }
-  }
+  // @keyframes butmove {
+  //   from {
+  //     margin-right: 20px;
+  //   }
+  //   to {
+  //     margin-right: 50px;
+  //   }
+  // }
   p {
     font-family: "Barlow";
     font-style: normal;
@@ -74,7 +74,7 @@ export const Destinationstyle = styled.div`
   h5 {
     margin-bottom: 10px;
   }
-  img {
+  .destination-card img {
     margin-left: 2rem;
     width: 300px;
     height: 300px;
@@ -147,32 +147,34 @@ export const Destinationstyle = styled.div`
       display: none;
     }
     button {
-      margin-inline: 15px;
+      margin-inline: 10px;
       line-height: initial;
       // margin-top: 230px;
     }
-    @keyframes butmove {
-      from {
-        margin-inline: 10px;
-      }
-      to {
-        margin-inline: 20px;
-      }
-    }
+    // @keyframes butmove {
+    //   from {
+    //     margin-inline: 10px;
+    //   }
+    //   to {
+    //     margin-inline: 20px;
+    //   }
+    // }
 
     h2 {
       font-size: 16px;
       letter-spacing: 2.7px;
+      margin-inline: auto;
     }
     h3 {
       font-size: 28px;
     }
     h5 {
-      margin: 0;
+      margin: 0 auto;
     }
     p {
       font-size: 15px;
       line-height: 25px;
+      margin-inline: auto;
     }
 
     .section {
@@ -187,10 +189,13 @@ export const Destinationstyle = styled.div`
       height: 174px;
       margin: 25px auto;
     }
-
+    nav {
+      margin-inline: auto;
+    }
     .destination-wrapper {
       flex-direction: column;
       justify-content: flex-start;
+      align-items: center;
       text-align: center;
       margin: 0 auto 0 auto;
       flex-direction: column;
@@ -242,6 +247,7 @@ export const Destinationstyle = styled.div`
     }
     .distance {
       margin-bottom: 20px;
+      margin-inline: auto;
     }
   }
 `;

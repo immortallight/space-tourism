@@ -81,6 +81,8 @@ const Homestyled = styled.div`
     background-image: url(${mobileBackground});
     height: 100vh;
     background-size: cover;
+      margin-inline: auto;
+
 
     padding: 0px 16px;
     br {
@@ -110,11 +112,18 @@ const Homestyled = styled.div`
       align-items: center;
       text-align: center;
       padding: 100px 16px 0 16px;
+      margin-inline: auto;
+
+    }
+    .side{
+      margin-inline: auto;
     }
     .home-p {
       margin-bottom: 0px;
       font-size: 15px;
       line-height: 25px;
+      margin-inline: auto;
+
     }
 
     .explore {

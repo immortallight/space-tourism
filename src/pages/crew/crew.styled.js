@@ -101,9 +101,7 @@ export const CrewStyle = styled.div`
     br {
       display: none;
     }
-    button {
-      margin-inline: 15px;
-    }
+
     h1 {
       margin: 0 auto 10px auto;
       font-size: 24px;
@@ -137,6 +135,10 @@ export const CrewStyle = styled.div`
     .crew-bar {
       margin: 15px auto;
       display: flex;
+    }
+    .crew-bar > * {
+      margin-inline: 15px;
+      width: 10px;
     }
     .mobile-img img {
       width: 12.5rem;
