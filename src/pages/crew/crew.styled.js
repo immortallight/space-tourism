@@ -101,7 +101,9 @@ export const CrewStyle = styled.div`
     br {
       display: none;
     }
-
+    button {
+      margin-inline: 15px;
+    }
     h1 {
       margin: 0 auto 10px auto;
       font-size: 24px;
@@ -117,7 +119,7 @@ export const CrewStyle = styled.div`
       line-height: 25px;
     }
     .crew-wrapper {
-      padding: 90px 16px 0 16px;
+      padding: 70px 16px 0 16px;
       align-item: center;
       justify-content: flex-start;
     }

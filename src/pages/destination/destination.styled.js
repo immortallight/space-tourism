@@ -68,7 +68,7 @@ export const Destinationstyle = styled.div`
     font-family: "Bellefair";
     font-style: normal;
     font-weight: 400;
-    line-height: 32px;
+    // line-height: 32px;
     text-transform: uppercase;
   }
   h5 {
@@ -147,7 +147,8 @@ export const Destinationstyle = styled.div`
       display: none;
     }
     button {
-      margin-inline: 20px;
+      margin-inline: 15px;
+      line-height: initial;
       // margin-top: 230px;
     }
     @keyframes butmove {
@@ -182,8 +183,8 @@ export const Destinationstyle = styled.div`
     }
     .section img {
       display: block;
-      width: 200px;
-      height: 200px;
+      width: 174px;
+      height: 174px;
       margin: 25px auto;
     }
 
@@ -199,7 +200,7 @@ export const Destinationstyle = styled.div`
     .current-destination {
       margin: 25px auto 15px auto;
       font-size: 56px;
-      line-height: 64px;
+      line-height: initial;
     }
     .destination-card {
       justify-content: center;
@@ -209,7 +210,7 @@ export const Destinationstyle = styled.div`
     }
     .destination-bar {
       justify-content: center;
-      margin: 0;
+      margin: 0 auto;
     }
 
     .destination-bar nav {
@@ -224,7 +225,7 @@ export const Destinationstyle = styled.div`
     .side-destination {
       display: flex;
       flex-direction: column;
-      margin: 0;
+      margin: 0 auto;
     }
 
     .hr {
@@ -237,7 +238,7 @@ export const Destinationstyle = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin: 0;
+      margin: 0 auto;
     }
     .distance {
       margin-bottom: 20px;

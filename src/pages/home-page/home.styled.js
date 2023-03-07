@@ -48,10 +48,8 @@ const Homestyled = styled.div`
     font-style: normal;
     font-weight: 400;
     font-size: 150px;
-    line-height: 172px;
-    // font-size: 8rem;
     font-weight: 400;
-    margin: 0;
+    margin: 0 auto;
     width: 31rem;
   }
 
@@ -59,9 +57,9 @@ const Homestyled = styled.div`
     // font-family: "Barlow Condensed";
     font-style: normal;
     font-weight: 400;
-    font-size: 28px;
+    // font-size: 28px;
     line-height: 34px;
-
+    margin-inline-auto;
     letter-spacing: 4.725px;
 
     margin-block: 0;
