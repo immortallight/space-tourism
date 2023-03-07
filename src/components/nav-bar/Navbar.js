@@ -1,66 +1,72 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { Headerstyle } from "./Navbar.styled";
-import styled from "styled-components";
+import logo from "./logo.svg";
+import menu from "./icon-hamburger.svg";
+import close from "./icon-close.svg";
 
-const Logostyle = styled.div`
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-`;
-
-const Logo = () => {
-  return (
-    <>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="48
-      "
-        height="48"
-      >
-        <g fill="none" fill-rule="evenodd">
-          <circle cx="24" cy="24" r="24" fill="#FFF" />
-          <path
-            fill="#0B0D17"
-            d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"
-          />
-        </g>
-      </svg>
-    </>
-  );
-};
 const Navbar = () => {
+  const [showNav, setShowNav] = useState(false);
+  const ref = useRef();
+  useEffect(() => {
+    const handleClickOuts = (event) => {
+      if (showNav && ref.current && !ref.current.contains(event.target)) {
+        setShowNav(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOuts);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOuts);
+    };
+  }, [showNav]);
+
   return (
     <Headerstyle>
       <div className="header-wrapper">
-        <Logostyle>
-          <Logo />
-        </Logostyle>
+        <div>
+          <img src={logo} alt="logo" className="logo" />
+        </div>
         <div className="hr"></div>
-        <div className="nav">
+        <div className={`nav ${showNav && "active"}`} ref={ref}>
+          <>
+            <img
+              src={close}
+              alt="close"
+              className="close"
+              onClick={() => setShowNav(!showNav)}
+            />
+          </>
           <ul>
             <li>
               <NavLink to="/">
-                <b>00</b> Home
+                <b>00</b> HOME
               </NavLink>
             </li>
             <li>
               <NavLink to="destination">
-                <b>01</b> Destination
+                <b>01</b> DESTINATION
               </NavLink>
             </li>
             <li>
               <NavLink to="crew">
-                <b>02</b> Crew
+                <b>02</b> CREW
               </NavLink>
             </li>
             <li>
               <NavLink to="technology">
-                <b>03</b> Technology
+                <b>03</b> TECHNOLOGY
               </NavLink>
             </li>
           </ul>
         </div>
+        <>
+          <img
+            src={menu}
+            alt="hamburger menu "
+            className=" menu "
+            onClick={() => setShowNav(!showNav)}
+          />
+        </>
       </div>
     </Headerstyle>
   );

@@ -1,15 +1,14 @@
 import styled from "styled-components";
 import desktopBackground from "./background-technology-desktop.jpg";
+import mobileBackground from "./background-technology-mobile.jpg";
 
 export const TechnologyStyle = styled.div`
   background-image: url(${desktopBackground});
   color: #ffff;
-  background-repeat: "no-repeat";
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 100vh;
-  overflow-y: hidden;
-  margin-top: -110px;
   color: #ffff;
-  padding: 0px 0 0 170px;
   button {
     background: none;
     border-radius: 50%;
@@ -17,38 +16,47 @@ export const TechnologyStyle = styled.div`
     color: #ffff;
     width: 45px;
     height: 45px;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
   }
-    
+
   button:focus {
     background-color: #ffff;
-      color: #0b0d17;
-
+    color: #0b0d17;
   }
   button:hover {
-       border: 1px solid rgba(255, 255, 255, 0.9);
-
+    border: 1px solid rgba(255, 255, 255, 0.9);
   }
-  h1{
-        margin: 5px 0 10px 0;
-
+  h1 {
+    margin: 5px 0 10px 0;
+    font-family: "Bellefair";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
   }
   h2 {
-    margin-bottom: 120px;
     display: inline;
-    font-weight: lighter;
-}
-  h2 span{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+
+    letter-spacing: 4.725px;
+  }
+  h2 span {
     font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
   }
   h6 {
     display: inline;
-    mar
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 2.7px;
   }
-  img {
+  section img {
     display: inline;
-    margin-bottom: 100px;
     height: 23rem;
     width: 26rem;
   }
@@ -63,20 +71,92 @@ export const TechnologyStyle = styled.div`
     justify-content: space-between;
   }
   .technology-wrapper {
-    margin-top: 160px;
+    padding: 30% 0 60px 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100vh;
   }
 
   .technology-bar {
     display: flex;
     flex-direction: column;
-    margin-top: 120px;
+    margin-top: 80px;
   }
   .technology-card {
     display: flex;
-    // justify-content: space-between;
+    align-items: flex-end;
   }
   .technology-side {
-    margin-top: 120px;
+    margin-bottom: 50px;
     margin-right: 240px;
+  }
+  .mobile-img {
+    display: none;
+  }
+
+  // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+  @media (max-width: 900px) {
+    background-image: url (${mobileBackground});
+    text-align: center;
+
+    br {
+      display: none;
+    }
+    button {
+      width: 45px;
+      height: 45px;
+      margin: 0 16px;
+    }
+
+    h1 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+    }
+    h6 {
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 25px;
+    }
+    section img {
+      display: none;
+    }
+    section {
+      flex-direction: column;
+      padding: 0 16px;
+    }
+
+    .technology-wrapper {
+      padding: 100px 0 0 0;
+      justify-content: flex-start;
+    }
+
+    .technology-side {
+      margin: 0;
+    }
+
+    .technology-bar {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 0px;
+      margin-bottom: 25px;
+    }
+
+    .mobile-img {
+      display: block;
+    }
+    .mobile-img > * {
+      width: 100vw;
+      margin: 25px 0 25px 0;
+    }
   }
 `;
