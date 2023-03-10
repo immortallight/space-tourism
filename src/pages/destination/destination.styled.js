@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import desktopBackground from "./background-destination-desktop.jpg";
 import mobileBackground from "./background-destination-mobile.jpg";
+import tabletBackground from "./background-destination-tablet.jpg";
 export const Destinationstyle = styled.div`
   background-image: url(${desktopBackground});
   background-size: cover;
@@ -140,7 +141,7 @@ export const Destinationstyle = styled.div`
     display: none;
   }
   // // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-  @media (max-width: 900px) {
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
     background-image: url (${mobileBackground});
 
     br {
@@ -188,6 +189,7 @@ export const Destinationstyle = styled.div`
       width: 174px;
       height: 174px;
       margin: 25px auto;
+      animation: spin infinite linear 20s;
     }
     nav {
       margin-inline: auto;
@@ -248,6 +250,116 @@ export const Destinationstyle = styled.div`
     .distance {
       margin-bottom: 20px;
       margin-inline: auto;
+    }
+  }
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    background-image: url(${tabletBackground});
+    text-align: center;
+    br {
+      display: none;
+    }
+    button {
+      margin-inline: 10px;
+      line-height: initial;
+      // margin-top: 230px;
+    }
+    // @keyframes butmove {
+    //   from {
+    //     margin-inline: 10px;
+    //   }
+    //   to {
+    //     margin-inline: 20px;
+    //   }
+    // }
+
+    h2 {
+      font-size: 16px;
+      letter-spacing: 2.7px;
+      text-align: left;
+    }
+    h3 {
+      font-size: 28px;
+    }
+    h5 {
+      margin: 0 auto;
+    }
+    p {
+      font-size: 15px;
+      line-height: 25px;
+      width: 55%;
+      margin-inline: auto;
+    }
+
+    .section {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: fit-content;
+    }
+    .section img {
+      display: block;
+      width: 240px;
+      height: 240px;
+      margin: 45px auto;
+      animation: spin infinite linear 20s;
+    }
+    nav {
+      margin-inline: auto;
+    }
+    .destination-wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      margin: 0 auto 0 auto;
+      flex-direction: column;
+      text-align: center;
+      padding: 140px 16px 0 16px;
+    }
+    .current-destination {
+      margin: 25px auto 15px auto;
+      font-size: 70px;
+      line-height: initial;
+    }
+    .destination-card {
+      justify-content: center;
+    }
+    .destination-card img {
+      display: none;
+    }
+    .destination-bar {
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .destination-bar nav {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .destination-card {
+      flex-direction: column;
+    }
+
+    .side-destination {
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+
+    .hr {
+      width: 80%;
+      height: 0;
+      border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+      margin: 45px auto 35px auto;
+    }
+    .time-distance {
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+    }
+    .time-distance > * {
+      margin: 30px;
     }
   }
 `;

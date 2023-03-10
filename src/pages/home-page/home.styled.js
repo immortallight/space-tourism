@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import desktopBackground from "./background-home-desktop.jpg";
 import mobileBackground from "./background-home-mobile.jpg";
-// import { devices } from "../../components/device";
+import tabletBackground from "./background-home-tablet.jpg";
 
 const Homestyled = styled.div`
   background-image: url(${desktopBackground});
@@ -77,11 +77,11 @@ const Homestyled = styled.div`
   }
   // ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  @media (max-width: 900px) {
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
     background-image: url(${mobileBackground});
     height: 100vh;
     background-size: cover;
-      margin-inline: auto;
+    margin-inline: auto;
 
 
     padding: 0px 16px;
@@ -135,6 +135,68 @@ const Homestyled = styled.div`
     }
     .explore h2 {
       // font-size: 10px;
+      // width: 10rem;
+    }
+    .explore:hover {
+      border: solid 58px rgba(255, 255, 255, 0.3);
+    }
+  }
+    @media only screen and (min-width: 577px) and (max-width: 768px) {
+    background-image: url(${tabletBackground});
+    // background-size: cover;
+    background-position: center;
+    // transform: rotate(90deg);
+
+    text-align: center;
+     padding: 0px 16px;
+    br {
+      display: none;
+    }
+    h1 {
+         font-size: 150px;
+          font-weight: 200;
+          margin: 10px 0 1rem 0;
+    }
+    h1,
+    h2 {
+      width: fit-content;
+      margin-inline: auto;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 2.7px;
+    }
+
+    .home-wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+      padding: 200px 16px 0 16px;
+      margin-inline: auto;
+
+    }
+    .side{
+      margin-inline: auto;
+    }
+    .home-p {
+      font-size: 15px;
+      line-height: 25px;
+      width: 55%;
+      margin-inline: auto;
+    }
+
+    .explore {
+      padding: 20px;
+      height: 230px;
+      width: 230px;
+      justify-content: center;
+      margin: auto;
+    }
+    .explore h2 {
+      font-size: 22px;
       // width: 10rem;
     }
     .explore:hover {

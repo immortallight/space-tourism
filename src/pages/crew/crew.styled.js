@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import desktopBackground from "./background-crew-desktop.jpg";
 import mobileBackground from "./background-crew-mobile.jpg";
+import tabletBackground from "./background-crew-tablet.jpg";
 
 export const CrewStyle = styled.div`
   background-image: url(${desktopBackground});
@@ -94,7 +95,7 @@ export const CrewStyle = styled.div`
 
   //  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  @media (max-width: 900px) {
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
     background-image: url (${mobileBackground});
     text-align: center;
 
@@ -137,7 +138,7 @@ export const CrewStyle = styled.div`
       display: flex;
     }
     .crew-bar > * {
-      margin-inline: 15px;
+      margin-inline: 10px;
       width: 10px;
     }
     .mobile-img img {
@@ -153,4 +154,64 @@ export const CrewStyle = styled.div`
       margin: 0 auto;
     }
   }
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    background-image: url (${tabletBackground});
+    text-align: center;
+     br {
+      display: none;
+    }
+
+    h1 {
+      margin: 0 auto 10px auto;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 18px;
+      margin: 35px auto 15px auto;
+    }
+    p {
+      font-size: 15px;
+      line-height: 25px;
+      width: 55%;
+      margin-inline: auto;
+    }
+    .crew-wrapper {
+      padding: 140px 16px 0 16px;
+      align-item: center;
+      justify-content: flex-start;
+    }
+    .crew-banner {
+      margin: 0;
+      text-align: left;
+    }
+
+    .crew-card {
+      margin: 20px auto 0 auto;
+      flex-direction: column;
+    }
+    .crew-card img {
+      display: block;
+      width: 58%;
+      // margin-inline: auto;
+      margin-left: -223px;
+      right: 0%;
+      left: 50%;
+
+    }
+    .crew-bar {
+      margin: 15px auto;
+      display: flex;
+    }
+    .crew-bar > * {
+      margin-inline: 10px;
+      width: 10px;
+    }
+    .mobile-img  {
+      display: none;
+    }
+    .hr {
+      display: none;
+    }
 `;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import desktopBackground from "./background-technology-desktop.jpg";
 import mobileBackground from "./background-technology-mobile.jpg";
+import tabletBackground from "./background-technology-tablet.jpg";
 
 export const TechnologyStyle = styled.div`
   background-image: url(${desktopBackground});
@@ -97,7 +98,7 @@ export const TechnologyStyle = styled.div`
 
   // /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-  @media (max-width: 900px) {
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
     background-image: url (${mobileBackground});
     text-align: center;
 
@@ -154,9 +155,76 @@ export const TechnologyStyle = styled.div`
     .mobile-img {
       display: block;
     }
-    .mobile-img > * {
+    .mobile-img img {
       width: 100vw;
       margin: 25px 0 25px 0;
+    }
+  }
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    background-image: url (${tabletBackground});
+    text-align: center;
+
+    br {
+      display: none;
+    }
+    button {
+      width: 45px;
+      height: 45px;
+      margin: 0 16px;
+    }
+
+    h1 {
+      margin: 35px auto 45px auto;
+      line-height: 28px;
+    }
+    h2 {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2.7px;
+      text-align: left;
+      padding-inline: 16px;
+    }
+    h6 {
+      line-height: 17px;
+      letter-spacing: 2.3625px;
+    }
+    p {
+      font-size: 15px;
+      line-height: 25px;
+      width: 55%;
+      margin-inline: auto;
+    }
+    section img {
+      display: none;
+    }
+    section {
+      flex-direction: column;
+      padding: 0 16px;
+    }
+
+    .technology-wrapper {
+      padding: 140px 0 0 0;
+      justify-content: flex-start;
+    }
+
+    .technology-side {
+      margin: 0;
+    }
+
+    .technology-bar {
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 0px;
+      margin-bottom: 25px;
+      margin-inline: auto;
+    }
+
+    .mobile-img {
+      display: block;
+    }
+    .mobile-img img {
+      width: 100vw;
+      margin: 45px auto;
     }
   }
 `;

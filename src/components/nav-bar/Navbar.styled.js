@@ -65,7 +65,7 @@ export const Headerstyle = styled.header`
     display: none;
   }
 
-  @media (max-width: 900px) {
+  @media only screen and (min-width: 0px) and (max-width: 576px) {
     position: absolute;
     top: 0%;
     padding: 0;
@@ -114,6 +114,33 @@ export const Headerstyle = styled.header`
     }
     .active {
       display: block;
+    }
+  }
+
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+    b {
+      display: none;
+    }
+    a {
+      padding: 0 0 1.7rem 0;
+      line-height: 10px;
+      letter-spacing: 1.4px;
+    }
+
+    .hr {
+      display: none;
+    }
+    .nav {
+      width: 30rem;
+      height: 80px;
+      padding-top: 2rem;
+    }
+    ul {
+      margin-right: 0;
+      justify-content: flex-end;
+    }
+    li {
+      margin-right: 20px;
     }
   }
 `;
