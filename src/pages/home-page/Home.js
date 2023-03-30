@@ -1,7 +1,7 @@
 import React from "react";
 import Homestyled from "./home.styled";
 
-const Home = () => {
+const Home = React.memo(() => {
   return (
     <Homestyled>
       <div className="home-wrapper">
@@ -22,5 +22,5 @@ const Home = () => {
       </div>
     </Homestyled>
   );
-};
+});
 export default Home;

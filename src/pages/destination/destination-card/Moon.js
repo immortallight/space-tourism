@@ -1,6 +1,6 @@
 import React from "react";
 
-const Moon = () => {
+const Moon = React.memo(() => {
   return (
     <>
       <img src={require("./image-moon.png")} alt="moonImage" />
@@ -29,5 +29,5 @@ const Moon = () => {
       </div>
     </>
   );
-};
+});
 export default Moon;

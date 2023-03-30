@@ -1,6 +1,6 @@
 import React from "react";
 
-const Titan = () => {
+const Titan = React.memo(() => {
   return (
     <>
       <img src={require("./image-titan.png")} alt="titanImage" />
@@ -28,5 +28,5 @@ const Titan = () => {
       </div>
     </>
   );
-};
+});
 export default Titan;

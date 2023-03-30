@@ -1,6 +1,6 @@
 import React from "react";
 
-const Mars = () => {
+const Mars = React.memo(() => {
   return (
     <>
       <img src={require("./image-mars.png")} alt="marsImage" />
@@ -28,5 +28,5 @@ const Mars = () => {
       </div>
     </>
   );
-};
+});
 export default Mars;

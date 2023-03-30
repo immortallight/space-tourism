@@ -1,6 +1,6 @@
 import React from "react";
 
-const Europa = () => {
+const Europa = React.memo(() => {
   return (
     <>
       <img src={require("./image-europa.png")} alt="europaImage" />
@@ -29,5 +29,5 @@ const Europa = () => {
       </div>
     </>
   );
-};
+});
 export default Europa;
