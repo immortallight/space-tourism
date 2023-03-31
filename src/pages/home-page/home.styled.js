@@ -17,8 +17,8 @@ const Homestyled = styled.div`
     // margin-top: 230px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    padding: 0px 150px 80px 150px;
+    align-items: center;
+    padding: 10% 10% 0 10%;
     height: 100%;
   }
   .explore {
@@ -26,8 +26,8 @@ const Homestyled = styled.div`
     color: #0b0d17;
     border-radius: 50%;
     display: flex;
-    width: 300px;
-    height: 300px;
+    width: 18rem;
+    height: 18rem;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -46,11 +46,11 @@ const Homestyled = styled.div`
   h1 {
     font-family: "Bellefair";
     font-style: normal;
-    font-weight: 400;
-    font-size: 150px;
+    font-size: 900%;
     font-weight: 400;
     margin: 0 auto;
-    width: 31rem;
+    // width: 31rem;
+    display: inline-block;
   }
 
   h2 {
@@ -67,6 +67,8 @@ const Homestyled = styled.div`
   }
   .side {
     flex-direction: column;
+    display: inline-block;
+
   }
   .home-p {
     font-style: normal;
@@ -116,7 +118,7 @@ const Homestyled = styled.div`
 
     }
     .side{
-      margin-inline: auto;
+      // margin-inline: auto;
     }
     .home-p {
       margin-bottom: 0px;

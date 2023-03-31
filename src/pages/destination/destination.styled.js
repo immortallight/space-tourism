@@ -148,7 +148,7 @@ export const Destinationstyle = styled.div`
       display: none;
     }
     button {
-      margin-inline: 10px;
+      margin-inline: 3%;
       line-height: initial;
       // margin-top: 230px;
     }
@@ -167,7 +167,8 @@ export const Destinationstyle = styled.div`
       margin-inline: auto;
     }
     h3 {
-      font-size: 28px;
+      // font-size: 28px;
+      font-size: 150%;
     }
     h5 {
       margin: 0 auto;
@@ -185,11 +186,13 @@ export const Destinationstyle = styled.div`
       height: fit-content;
     }
     .section img {
-      display: block;
-      width: 174px;
-      height: 174px;
-      margin: 25px auto;
+      display: inline-block;
+      width: 60%;
+      // height: 50%;
+      margin: 4% auto;
+      // margin-block: 4%;
       animation: spin infinite linear 20s;
+      text-align: center;
     }
     nav {
       margin-inline: auto;
@@ -202,11 +205,13 @@ export const Destinationstyle = styled.div`
       margin: 0 auto 0 auto;
       flex-direction: column;
       text-align: center;
-      padding: 90px 16px 0 16px;
+      padding: 15% 16px 0 16px;
     }
     .current-destination {
       margin: 25px auto 15px auto;
-      font-size: 56px;
+      // font-size: 56px;
+      font-size: 400%;
+      margin: 0;
       line-height: initial;
     }
     .destination-card {
@@ -232,11 +237,13 @@ export const Destinationstyle = styled.div`
     .side-destination {
       display: flex;
       flex-direction: column;
+      margin-left: 0;
       margin: 0 auto;
     }
 
     .hr {
-      width: 18.5rem;
+      width: 80%;
+      margin: 0 auto;
       height: 0;
       border-bottom: solid 1px rgba(255, 255, 255, 0.3);
       margin: 25px auto 15px auto;

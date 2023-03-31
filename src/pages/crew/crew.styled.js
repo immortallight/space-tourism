@@ -111,14 +111,14 @@ export const CrewStyle = styled.div`
     h2 {
       font-size: 16px;
       line-height: 18px;
-      margin: 35px auto 15px auto;
+      margin: 4% auto;
     }
     p {
       font-size: 15px;
       line-height: 25px;
     }
     .crew-wrapper {
-      padding: 70px 16px 0 16px;
+      padding: 15% 16px 0 16px;
       align-item: center;
       justify-content: flex-start;
     }
@@ -138,7 +138,7 @@ export const CrewStyle = styled.div`
       display: flex;
     }
     .crew-bar > * {
-      margin-inline: 10px;
+      margin-inline: 7%;
       width: 10px;
     }
     .mobile-img img {
